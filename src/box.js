@@ -5,6 +5,9 @@ var $veggieList = $('.veggie-list');
 
 $submitButton.on('click', function () {
   var options = { name: $veggieName.val(), season: $veggieSeason.val() };
+  $veggieName.val('');
+  $veggieSeason.val('');
+
   garden.veggies.push(new Veggie(options));
   garden.render();
 });
